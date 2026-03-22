@@ -1,0 +1,150 @@
+.destinations-page {
+  padding: 10rem 0 8rem;
+}
+
+.page-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: var(--on-surface-variant);
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+/* Detail Page */
+.destination-hero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.destination-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destination-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 30, 64, 0.9) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+
+.text-white {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.destination-hero-meta {
+  color: var(--surface-container-high);
+  font-size: 1.25rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.destination-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  padding: 6rem 2rem;
+}
+
+.destination-main h2, .destination-main h3 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.destination-main h3 {
+  margin-top: 3rem;
+}
+
+.destination-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--on-surface-variant);
+}
+
+.destination-highlights {
+  list-style: none;
+  padding: 0;
+}
+
+.destination-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--on-surface);
+  line-height: 1.6;
+}
+
+.destination-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+
+.booking-card {
+  padding: 2rem;
+  position: sticky;
+  top: 8rem;
+}
+
+.booking-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.booking-card p {
+  color: var(--on-surface-variant);
+  margin-bottom: 2rem;
+}
+
+.booking-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--surface-container);
+}
+
+.price-label {
+  color: var(--on-surface-variant);
+}
+
+.price-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .destination-content {
+    grid-template-columns: 1fr;
+  }
+}

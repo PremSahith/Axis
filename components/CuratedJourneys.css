@@ -1,0 +1,131 @@
+.journeys {
+  padding: 8rem 0;
+  background-color: var(--surface);
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 5rem;
+}
+
+.journeys-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.journey-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.journey-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.journey-image-col {
+  flex: 1;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 20px 60px rgba(0, 30, 64, 0.08);
+}
+
+.journey-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.journey-content-col {
+  flex: 1;
+  padding: 2rem;
+}
+
+.journey-title {
+  font-size: 2.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.journey-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.journey-price {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.journey-dot {
+  color: var(--outline-variant);
+}
+
+.journey-days {
+  color: var(--on-surface-variant);
+  font-size: 1rem;
+}
+
+.journey-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+.journey-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--on-surface);
+  line-height: 1.5;
+}
+
+.journey-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.skeleton-journey {
+  display: flex;
+  gap: 4rem;
+  height: 400px;
+}
+.skeleton-img {
+  flex: 1;
+  border-radius: 2rem;
+}
+.skeleton-content {
+  flex: 1;
+  border-radius: 2rem;
+}
+
+@media (max-width: 992px) {
+  .journey-row, .journey-row.reverse, .skeleton-journey {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .journey-image-col {
+    width: 100%;
+  }
+}

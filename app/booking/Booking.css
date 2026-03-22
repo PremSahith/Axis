@@ -1,0 +1,142 @@
+.booking-page {
+  padding: 10rem 0 8rem;
+  background-color: var(--surface-container-low);
+  min-height: 100vh;
+}
+
+.booking-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.booking-form {
+  padding: 4rem;
+}
+
+.booking-success {
+  padding: 6rem 4rem;
+  text-align: center;
+  background-color: var(--surface-container-lowest);
+}
+
+.booking-success p {
+  font-size: 1.25rem;
+  color: var(--on-surface-variant);
+  margin-top: 1rem;
+}
+
+.form-section {
+  margin-bottom: 3.5rem;
+}
+
+.form-section h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-bottom: 1px solid var(--surface-container);
+  padding-bottom: 0.5rem;
+}
+
+.section-hint {
+  color: var(--on-surface-variant);
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background-color: var(--surface-container-low);
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--on-surface);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input:focus, select:focus {
+  background-color: var(--surface-container-lowest);
+  border-color: rgba(155, 69, 0, 0.4); /* Secondary Ghost border */
+  box-shadow: 0 0 0 4px rgba(155, 69, 0, 0.05);
+}
+
+/* Luxury Preferences */
+.preferences-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.preference-card {
+  display: block;
+  padding: 1rem 1.5rem;
+  background-color: var(--surface-container-low);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.preference-card.active {
+  background-color: var(--surface-container-lowest);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 30, 64, 0.05);
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.error-message {
+  background-color: rgba(186, 26, 26, 0.1);
+  color: #ba1a1a;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .booking-form {
+    padding: 2rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .preferences-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,120 @@
+.testimonials {
+  padding: 8rem 0;
+  background-color: var(--surface-container-lowest);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slider-btn {
+  background: var(--surface);
+  border: 1px solid var(--outline-variant);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary);
+  transition: all 0.2s ease;
+}
+
+.slider-btn:hover {
+  background: var(--surface-container-high);
+  transform: scale(1.05);
+}
+
+.testimonial-content {
+  flex: 1;
+  text-align: center;
+  padding: 3rem;
+  background: var(--surface);
+  border-radius: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 30, 64, 0.03);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-text {
+  font-size: 1.5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--on-surface);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface-container-lowest);
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--outline-variant);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--primary);
+  transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+  .testimonial-slider {
+    flex-direction: column;
+  }
+  .testimonial-text {
+    font-size: 1.25rem;
+  }
+  .slider-btn {
+    display: none; /* Hide arrows on mobile, rely on dots/swipe theoretically */
+  }
+}
